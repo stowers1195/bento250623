@@ -15,7 +15,9 @@ dependencies:
   - pynwb
   - pyside2
   - python
+  - pyqt
   - qtpy
+  - pyqtchart
   - scikit-learn
   - scikit-video
   - sortedcontainers
