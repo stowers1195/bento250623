@@ -16,6 +16,8 @@ dependencies:
   - pyside2
   - python
   - qtpy
+  - pyqt
+  - pyqtchart
   - scikit-learn
   - scikit-video
   - sortedcontainers
