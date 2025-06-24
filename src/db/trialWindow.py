@@ -3,8 +3,7 @@
 from db.trialWindow_ui import Ui_TrialDockWidget
 from db.editTrialDialog import EditTrialDialog
 from db.editSessionDialog import EditSessionDialog
-from qtpy.QtCore import Signal, Slot, QItemSelection
-from qtpy.QtGui import Qt
+from qtpy.QtCore import Signal, Slot, QItemSelection, Qt
 from qtpy.QtWidgets import QAbstractItemView, QDockWidget, QHeaderView, QMessageBox
 
 from db.schema_sqlalchemy import VideoData, Investigator, Session, Animal, Trial, AnnotationsData
