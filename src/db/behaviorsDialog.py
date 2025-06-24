@@ -4,7 +4,8 @@ from annot.behavior import Behavior
 from db.behaviorsDialog_ui import Ui_BehaviorsDialog
 from qtpy.QtCore import (QAbstractItemModel, QModelIndex, QPersistentModelIndex,
     QSortFilterProxyModel, Signal, Slot)
-from qtpy.QtGui import QColor, QIntValidator, Qt
+from qtpy.Core import Qt
+from qtpy.QtGui import QColor, QIntValidator
 from qtpy.QtWidgets import (QColorDialog, QDialog, QHeaderView, QLineEdit,
     QMessageBox, QStyledItemDelegate, QStyleOptionViewItem, QWidget)
 from os.path import expanduser, sep
