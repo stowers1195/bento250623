@@ -1,7 +1,7 @@
 # tableModel.py
 
-from qtpy.QtCore import QAbstractTableModel, QModelIndex
-from qtpy.QtGui import Qt, QColor
+from qtpy.QtCore import QAbstractTableModel, QModelIndex, Qt
+from qtpy.QtGui import QColor
 import operator
 
 class TableModel(QAbstractTableModel):
