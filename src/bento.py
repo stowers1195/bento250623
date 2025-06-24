@@ -125,7 +125,7 @@ class Bento(QObject, DataExporter):
         self.widgets = []
         self.annotations_format = ['Bento', 'SimBA', 'Boris', 'Caltech']
         self.annotations = Annotations(self.behaviors)
-        self.annotations.annotations_changed.connect(self.noteAnnotationsChanged)
+        self.annotations.annotations_changed.connect(self.noteAnnotationsChangedNoArgs)
         self.annotations.annotations_changed.connect(self.updateNWBFile)
         self.newChannelAdded.connect(self.updateNWBFile)
         self.pose_registry = PoseRegistry()
@@ -872,7 +872,10 @@ class Bento(QObject, DataExporter):
             end = end.float
         #self.newAnnotations = True
         self.annotationsScene.sceneChanged(start, end)
-
+    @Slot()
+    def noteAnnotationsChangedNoArgs(self):
+        self.noteAnnotationsChanged(self.time_start, self.time_end)
+    
     @Slot(int)
     def noteVideoDurationChanged(self, duration):
         video_end = duration / 1000.
